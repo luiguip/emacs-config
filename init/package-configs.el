@@ -3,6 +3,7 @@
         flx-ido
         smex
         company
+        company-quickhelp
         magit
         paredit
         rainbow-delimiters))
