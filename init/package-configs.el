@@ -13,3 +13,4 @@
 (load-library "smex-config")
 (load-library "company-config")
 (load-library "magit-config")
+(load-library "paredit-config")
