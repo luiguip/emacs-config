@@ -6,7 +6,8 @@
         company-quickhelp
         magit
         paredit
-        rainbow-delimiters))
+        rainbow-delimiters
+        projectile))
 
 (dolist (package my-packages)
   (unless (package-installed-p package)
