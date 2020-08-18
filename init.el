@@ -3,6 +3,12 @@
              '("melpa" . "https://melpa.org/packages/"))
 (package-initialize)
 
+;;Configs
+(add-to-list 'load-path "~/.emacs.d/init")
+(load-library "configs")
+(load-library "package-configs")
+
+;;Auto generated
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -29,7 +35,3 @@
  ;; If there is more than one, they won't work right.
  )
 
-;;Configs
-(add-to-list 'load-path "~/.emacs.d/init")
-(load-library "configs")
-(load-library "package-configs")
