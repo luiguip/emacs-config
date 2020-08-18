@@ -55,3 +55,6 @@ smex-items
 
 #magit
 transient/
+
+#projectile
+projectile-bookmarks.eld
