@@ -49,3 +49,6 @@ flycheck_*.el
 
 #ido
 ido.last
+
+#smex
+smex-items
