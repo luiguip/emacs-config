@@ -17,8 +17,6 @@
 (setq inhibit-startup-message t)
 ;;save session
 (desktop-save-mode t)
-;;start emacs server
-(server-start)
 ;;tabs
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
