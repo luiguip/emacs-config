@@ -9,9 +9,15 @@
   (unless (package-installed-p package)
     (package-install package)))
 
+(setq my-configs
+      '("ido-config"
+        "smex-config"
+        "company-config"
+        "magit-config"
+        "paredit-config"
+        "rainbow-delimiters-config"))
+
 (add-to-list 'load-path "~/.emacs.d/init/package-configs")
-(load-library "ido-config")
-(load-library "smex-config")
-(load-library "company-config")
-(load-library "magit-config")
-(load-library "paredit-config")
+
+(dolist (config my-configs)
+  (load-library config))
