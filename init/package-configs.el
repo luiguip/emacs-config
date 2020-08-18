@@ -1,7 +1,8 @@
 (setq my-packages
       '(smex
         company
-        magit))
+        magit
+        paredit))
 
 (dolist (package my-packages)
   (unless (package-installed-p package)
