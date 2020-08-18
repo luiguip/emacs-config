@@ -2,7 +2,8 @@
       '(smex
         company
         magit
-        paredit))
+        paredit
+        rainbow-delimiters))
 
 (dolist (package my-packages)
   (unless (package-installed-p package)
