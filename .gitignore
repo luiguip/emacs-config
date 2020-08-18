@@ -58,3 +58,6 @@ transient/
 
 #projectile
 projectile-bookmarks.eld
+
+#backups
+var/
