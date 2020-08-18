@@ -1,5 +1,6 @@
 (setq my-packages
-      '(smex))
+      '(smex
+        company))
 
 (dolist (package my-packages)
   (unless (package-installed-p package)
