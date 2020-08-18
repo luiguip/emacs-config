@@ -1,5 +1,7 @@
 (setq my-packages
-      '(smex
+      '(ido-vertical-mode
+        flx-ido
+        smex
         company
         magit
         paredit
