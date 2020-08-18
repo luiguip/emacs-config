@@ -1,6 +1,7 @@
 (setq my-packages
       '(smex
-        company))
+        company
+        magit))
 
 (dolist (package my-packages)
   (unless (package-installed-p package)

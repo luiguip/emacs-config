@@ -17,7 +17,7 @@
    (quote
     ("24714e2cb4a9d6ec1335de295966906474fdb668429549416ed8636196cb1441" default)))
  '(menu-bar-mode nil)
- '(package-selected-packages (quote (company smex dracula-theme)))
+ '(package-selected-packages (quote (magit company smex dracula-theme)))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil))
 (custom-set-faces
