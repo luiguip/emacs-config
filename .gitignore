@@ -52,3 +52,6 @@ ido.last
 
 #smex
 smex-items
+
+#magit
+transient/

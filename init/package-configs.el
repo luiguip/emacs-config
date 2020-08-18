@@ -11,3 +11,4 @@
 (load-library "ido-config")
 (load-library "smex-config")
 (load-library "company-config")
+(load-library "magit-config")
