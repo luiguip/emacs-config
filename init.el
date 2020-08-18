@@ -30,4 +30,4 @@
 ;;Configs
 (add-to-list 'load-path "~/.emacs.d/init")
 (load-library "configs")
-(load-library "packages")
+(load-library "package-configs")
