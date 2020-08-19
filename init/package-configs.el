@@ -11,7 +11,8 @@
         projectile
         popwin
         flycheck
-        evil)))
+        evil
+        hydra)))
 
   (dolist (package my-packages)
     (unless (package-installed-p package)
