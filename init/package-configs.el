@@ -9,8 +9,7 @@
         rainbow-delimiters
         projectile
         popwin
-        flycheck
-        lsp-mode))
+        flycheck))
 
 (dolist (package my-packages)
   (unless (package-installed-p package)
