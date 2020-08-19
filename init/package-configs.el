@@ -21,8 +21,7 @@
         "magit-config"
         "paredit-config"
         "rainbow-delimiters-config"
-        "projectile-config"
-        "elixir-config"))
+        "projectile-config"))
 
 (add-to-list 'load-path "~/.emacs.d/init/package-configs")
 
