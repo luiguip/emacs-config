@@ -57,7 +57,7 @@
     ("#dc322f" "#cb4b16" "#b58900" "#5b7300" "#b3c34d" "#0061a8" "#2aa198" "#d33682" "#6c71c4")))
  '(package-selected-packages
    (quote
-    (projectile projectilee company-quickhelp spacemacs-theme solarized-theme rainbow-delimiters paredit magit company smex dracula-theme)))
+    (alchemist projectile projectilee company-quickhelp spacemacs-theme solarized-theme rainbow-delimiters paredit magit company smex dracula-theme)))
  '(pos-tip-background-color "#073642")
  '(pos-tip-foreground-color "#93a1a1")
  '(scroll-bar-mode nil)

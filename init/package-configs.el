@@ -7,7 +7,8 @@
         magit
         paredit
         rainbow-delimiters
-        projectile))
+        projectile
+        alchemist))
 
 (dolist (package my-packages)
   (unless (package-installed-p package)
