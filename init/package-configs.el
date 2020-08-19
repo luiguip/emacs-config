@@ -30,6 +30,7 @@
          "projectile-config"
          "popwin-config"
          "flycheck-config"
-         "evil-config")))
+         "evil-config"
+         "hydra-config")))
 (dolist (config my-configs)
   (load-library config)))
