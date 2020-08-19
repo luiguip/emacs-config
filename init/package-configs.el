@@ -8,7 +8,9 @@
         paredit
         rainbow-delimiters
         projectile
-        alchemist))
+        popwin
+        flycheck
+        lsp-mode))
 
 (dolist (package my-packages)
   (unless (package-installed-p package)
