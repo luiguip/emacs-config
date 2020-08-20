@@ -32,6 +32,7 @@
          "popwin-config"
          "flycheck-config"
          "evil-config"
-         "hydra-config")))
+         "hydra-config"
+         "lsp-config")))
 (dolist (config my-configs)
   (load-library config)))
