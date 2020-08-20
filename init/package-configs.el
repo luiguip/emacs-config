@@ -13,7 +13,8 @@
         flycheck
         evil
         hydra
-        lsp-mode)))
+        lsp-mode
+        lsp-ui)))
 
   (dolist (package my-packages)
     (unless (package-installed-p package)
