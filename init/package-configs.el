@@ -12,7 +12,8 @@
         popwin
         flycheck
         evil
-        hydra)))
+        hydra
+        lsp-mode)))
 
   (dolist (package my-packages)
     (unless (package-installed-p package)
