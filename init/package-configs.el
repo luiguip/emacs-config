@@ -13,6 +13,7 @@
         flycheck
         evil
         hydra
+        elfeed
         lsp-mode
         lsp-ui)))
 

@@ -61,3 +61,6 @@ projectile-bookmarks.eld
 
 #backups
 var/
+
+#rss
+url/
