@@ -1,3 +1,3 @@
 (add-hook 'elixir-mode-hook #'lsp)
-(add-to-list 'exec-path "~/software/elixir-ls")
+(add-to-list 'exec-path "~/.emacs.d/lsp-servers/elixir-ls")
 
