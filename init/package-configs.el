@@ -35,6 +35,7 @@
          "flycheck-config"
          "evil-config"
          "hydra-config"
-         "lsp-config")))
+         "lsp-config"
+         "elfeed-config")))
 (dolist (config my-configs)
   (load-library config)))
