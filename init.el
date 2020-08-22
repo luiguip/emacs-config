@@ -1,12 +1,8 @@
+
 (require 'package) ;; You might already have this line
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/"))
 (package-initialize)
-
-;;Configs
-(add-to-list 'load-path "~/.emacs.d/init")
-(load-library "configs")
-(load-library "package-configs")
 
 ;;Auto generated
 (custom-set-variables
@@ -93,3 +89,7 @@
  ;; If there is more than one, they won't work right.
  )
 
+;;Configs
+(add-to-list 'load-path "~/.emacs.d/init")
+(load-library "configs")
+(load-library "package-configs")
