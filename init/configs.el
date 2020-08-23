@@ -16,7 +16,7 @@
 ;;disable welcome screen
 (setq inhibit-startup-message t)
 ;;save session
-(desktop-save-mode t)
+;;(desktop-save-mode t)
 ;;tabs
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
