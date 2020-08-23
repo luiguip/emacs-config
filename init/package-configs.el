@@ -16,7 +16,8 @@
         elfeed
         lsp-mode
         lsp-ui
-        neotree)))
+        neotree
+        all-the-icons)))
 
   (dolist (package my-packages)
     (unless (package-installed-p package)
@@ -38,6 +39,7 @@
          "hydra-config"
          "lsp-config"
          "elfeed-config"
-         "rcirc-config")))
+         "rcirc-config"
+         "file-manager-config")))
 (dolist (config my-configs)
   (load-library config)))
