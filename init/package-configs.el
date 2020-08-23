@@ -37,6 +37,7 @@
          "evil-config"
          "hydra-config"
          "lsp-config"
-         "elfeed-config")))
+         "elfeed-config"
+         "rcirc-config")))
 (dolist (config my-configs)
   (load-library config)))
