@@ -17,7 +17,8 @@
         lsp-mode
         lsp-ui
         neotree
-        all-the-icons)))
+        all-the-icons
+        treemacs-projectile)))
 
   (dolist (package my-packages)
     (unless (package-installed-p package)
