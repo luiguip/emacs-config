@@ -15,7 +15,8 @@
         hydra
         elfeed
         lsp-mode
-        lsp-ui)))
+        lsp-ui
+        neotree)))
 
   (dolist (package my-packages)
     (unless (package-installed-p package)
