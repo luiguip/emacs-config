@@ -16,7 +16,7 @@
         elfeed
         lsp-mode
         lsp-ui
-        neotree
+        treemacs
         all-the-icons
         treemacs-projectile)))
 

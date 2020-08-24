@@ -1,8 +1,10 @@
-(require 'neotree)
-(global-set-key [f8] 'neotree-toggle)
+(require 'treemacs)
+(global-set-key [f8] 'treemacs)
+(treemacs-git-mode 'extended)
+(with-eval-after-load 'treemacs
+  (add-to-list 'treemacs-pre-file-insert-predicates #'treemacs-is-file-git-ignored?))
 
 (require 'treemacs-projectile)
-(global-set-key [f2] 'treemacs-projectile)
 
 (require 'all-the-icons)
 (setq neo-theme
