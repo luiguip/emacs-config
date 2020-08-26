@@ -7,20 +7,38 @@
 	       :channels ("#emacs"))))
 (setq rcirc-authinfo
       '("freenode" nickserv))
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(defadvice rcirc (before rcirc-read-from-authinfo activate)                   ;;
-  "Allow rcirc to read authinfo from ~/.authinfo.gpg via the auth-source API. ;;
-This doesn't support the chanserv auth method"                                ;;
-  (unless arg                                                                 ;;
-    (dolist (p (auth-source-search :port '("nickserv" "bitlbee" "quakenet")   ;;
-                                   :require '(:port :user :secret)))          ;;
-      (let ((secret (plist-get p :secret))                                    ;;
-            (method (intern (plist-get p :port))))                            ;;
-        (add-to-list 'rcirc-authinfo                                          ;;
-                     (list (plist-get p :host)                                ;;
-                           method                                             ;;
-                           (plist-get p :user)                                ;;
-                           (if (functionp secret)                             ;;
-                               (funcall secret)                               ;;
-                             secret)))))))                                    ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;###autoload
+(defun rcirc-tls (server)
+  "Handle `rcirc' tls connection to a irc SERVER.
+This function will tries to grab the server password (if any)
+from `auto-source-search'."
+  (interactive
+   (list
+    (completing-read "Server: " rcirc-server-alist nil t)))
+  ;; body:
+  (let* ((server-attrs (cdr (assoc server rcirc-server-alist)))
+         (login (plist-get server-attrs :nick))
+         (password (lookup-password server login))
+         (rcirc-server-alist nil))
+    ;; let body:
+    (if (not server-attrs)
+        (message "Server not found")
+      ;; if password update server attributes
+      (when password
+        (setq server-attrs (plist-put server-attrs :password password)))
+      ;; update local rcirc-server-alist
+      (setq rcirc-server-alist `((,server ,@server-attrs)))
+      ;; finally connect to 'all'
+      (rcirc nil))))
+
+(defun lookup-password (host user)
+  "Lookup using (HOST USER) password on auth-source default file."
+  (let* ((auth (auth-source-search :host host :user user))
+         (secretf (when auth (plist-get (car auth) :secret))))
+         (cond
+          ((not auth)
+           (message "No auth entry found for %s@%s" user host))
+          ((not secretf)
+             (message "Auth entry for %s@%s has no secret!" user host))
+          (t (funcall secretf)))))
