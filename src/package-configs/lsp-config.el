@@ -1,6 +1,6 @@
 (require 'lsp-mode)
 
-(add-to-list 'load-path "~/.emacs.d/init/package-configs/lsp-config")
+(add-to-list 'load-path "~/.emacs.d/src/package-configs/lsp-config")
 
 (let ((lsp-configs
        '("lsp-elixir-config")))

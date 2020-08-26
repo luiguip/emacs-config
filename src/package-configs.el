@@ -24,7 +24,7 @@
   (dolist (package my-packages)
     (unless (package-installed-p package)
       (package-install package))))
-(add-to-list 'load-path "~/.emacs.d/init/package-configs")
+(add-to-list 'load-path "~/.emacs.d/src/package-configs")
 
 (let
     ((my-configs

@@ -1,4 +1,3 @@
-
 (require 'package) ;; You might already have this line
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/"))
@@ -90,6 +89,6 @@
  )
 
 ;;Configs
-(add-to-list 'load-path "~/.emacs.d/init")
+(add-to-list 'load-path "~/.emacs.d/src")
 (load-library "configs")
 (load-library "package-configs")
