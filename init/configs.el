@@ -16,11 +16,11 @@
 ;;disable welcome screen
 (setq inhibit-startup-message t)
 ;;save session
-(desktop-save-mode t)
+;;(desktop-save-mode t)
 ;;tabs
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
-(setq make-bakcup-files nil)
-(setq backup-inhibited t)
+;;bakcups
+(setq backup-directory-alist '(("." . "~/.emacs.d/var/backup")))
+(setq backup-by-copying t)
 (setq auto-save-default nil)
-

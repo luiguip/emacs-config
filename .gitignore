@@ -40,6 +40,7 @@ flycheck_*.el
 
 # projectiles files
 .projectile
+.cache/
 
 # directory configuration
 .dir-locals.el
@@ -55,3 +56,16 @@ smex-items
 
 #magit
 transient/
+
+#projectile
+projectile-bookmarks.eld
+
+#backups
+var/
+
+#rss
+url/
+
+#irc
+secrets/
+
