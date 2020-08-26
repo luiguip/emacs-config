@@ -18,7 +18,8 @@
         lsp-ui
         treemacs
         all-the-icons
-        treemacs-projectile)))
+        treemacs-projectile
+        ivy)))
 
   (dolist (package my-packages)
     (unless (package-installed-p package)
@@ -27,7 +28,7 @@
 
 (let
     ((my-configs
-       '("ido-config"
+       '("ivy-config"
          "smex-config"
          "company-config"
          "magit-config"
