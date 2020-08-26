@@ -41,7 +41,8 @@
          "hydra-config"
          "lsp-config"
          "elfeed-config"
-         "rcirc-config"
-         "file-manager-config")))
+         "erc-config"
+         "file-manager-config"
+         "prog-confg")))
 (dolist (config my-configs)
   (load-library config)))
