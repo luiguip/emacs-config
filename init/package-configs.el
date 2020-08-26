@@ -43,6 +43,6 @@
          "elfeed-config"
          "erc-config"
          "file-manager-config"
-         "prog-confg")))
+         "prog-config")))
 (dolist (config my-configs)
   (load-library config)))
