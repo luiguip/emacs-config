@@ -1,6 +1,8 @@
 (let
     ((my-prog-packages
-      '(solidity-mode)))
+      '(solidity-mode
+        solidity-flycheck
+        company-solidity)))
 
   (dolist (my-prog-package my-prog-packages)
     (unless (package-installed-p my-prog-package)
