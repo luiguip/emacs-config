@@ -8,4 +8,6 @@
 ;;Configs
 (add-to-list 'load-path "~/.emacs.d/src")
 (load-library "configs")
+(load-library "install")
+(load-library "load")
 (load-library "package-configs")
