@@ -1,5 +1,5 @@
 (let
-    ((my-packages
+    ((packages
       '(ido-vertical-mode
         flx-ido
         smex
@@ -20,14 +20,11 @@
         all-the-icons
         treemacs-projectile
         ivy)))
-
-  (dolist (package my-packages)
-    (unless (package-installed-p package)
-      (package-install package))))
-(add-to-list 'load-path "~/.emacs.d/init/package-configs")
+  (if-not-installed-install packages))
 
 (let
-    ((my-configs
+    ((path "~/.emacs.d/src/package-configs")
+     (configs
        '("ivy-config"
          "smex-config"
          "company-config"
@@ -44,5 +41,4 @@
          "erc-config"
          "file-manager-config"
          "prog-config")))
-(dolist (config my-configs)
-  (load-library config)))
+  (load-libraries path configs))

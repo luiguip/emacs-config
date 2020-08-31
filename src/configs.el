@@ -1,4 +1,11 @@
 ;;Configs
+
+(load-theme 'cyberpunk t)
+
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+
 ;;Details
 (column-number-mode t)
 (global-linum-mode t)
